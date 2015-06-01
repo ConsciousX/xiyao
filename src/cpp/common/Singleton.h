@@ -1,6 +1,7 @@
 #pragma once
 
 #include <exception>
+#include <stdexcept>
 
 namespace xiyao {
     namespace common {
@@ -24,7 +25,7 @@ namespace xiyao {
             }
 
         protected:
-            explicet Singleton() throw() {
+            Singleton() throw() {
                 if (mT != nullptr) {
                     throw std::runtime_error("Singleton error");
                 }

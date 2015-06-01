@@ -4,11 +4,11 @@
 #include <vector>
 
 namespace xiyao {
-    namespace common {
+    namespace transport {
         class Server {
         public:
-            virtual void start() = 0;
-            virtual void stop() = 0;
+            virtual bool start() = 0;
+            virtual bool stop() = 0;
             virtual ~Server() {}
         private:
             std::string mIp;
@@ -16,6 +16,6 @@ namespace xiyao {
             int mSock;
             std::vector<int> mClientSocks;
         };
-    } //namespace common
+    } //namespace transport
 } //namespace xiyao
 
